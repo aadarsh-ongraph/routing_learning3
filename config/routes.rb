@@ -15,5 +15,6 @@ Rails.application.routes.draw do
 
    root 'students#index'
   #  get 'students', to: 'student#index'
-  resources :students, only: [:index, :new, :create]
+  resources :students, only: [:index, :new, :create, :edit, :update, :destroy]
+  # get '/students/:id', to: 'students#delete'
 end
