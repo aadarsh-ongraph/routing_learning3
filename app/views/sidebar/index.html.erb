@@ -1,0 +1,39 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dropdown Sidebar Example</title>
+  <%= stylesheet_link_tag 'sidebar', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_import_module_tag 'sidebar', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <header>
+    <h1>My Dropdown Sidebar App</h1>
+  </header>
+
+  <div class="sidebar">
+    <button class="sidebar-toggle" onclick="toggleSidebar()">Toggle Sidebar</button>
+    <ul class="menu">
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li class="dropdown">
+        <a href="#">Fruit</a>
+        <ul class="dropdown-content">
+          <li><a href="#">Apple</a></li>
+          <li><a href="#">Banana</a></li>
+          <li><a href="#">Kiwi</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Dairy</a>
+        <ul class="dropdown-content">
+          <li><a href="#">Tofu</a></li>
+          <li><a href="#">Milk</a></li>
+          <li><a href="#">Paneer</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

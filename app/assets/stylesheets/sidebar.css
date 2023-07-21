@@ -1,0 +1,80 @@
+
+  
+  /* Header styles */
+  header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    /* left: -250px; */
+    left: 0px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu li {
+    margin-bottom: 10px;
+/* this is my logic add */
+
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+    /* this is my logic add */
+  }
+  
+  .menu a:hover {
+    background-color: #555;
+  }
+  
+  /* Dropdown styles */
+  .dropdown-content {
+    display: none;
+    background-color: #555;
+    /* position: absolute; */
+    position: relative;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown-content li {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #777;
+  }
+  

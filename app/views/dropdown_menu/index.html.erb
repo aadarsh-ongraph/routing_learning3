@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dropdown Menu Example</title>
+  <%= stylesheet_link_tag 'styles', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <nav>
+    <ul class="menu">
+      <li><%= link_to "Home", root_path %></li>
+      <li class="dropdown">
+        <%= link_to "About", "#" %>
+        <ul class="dropdown-content">
+          <li><%= link_to "Company", about_path %></li>
+          <li><%= link_to "Team", "#" %></li>
+          <li><%= link_to "History", "#" %></li>
+        </ul>
+      </li>
+      <li><%= link_to "Contact", contact_path %></li>
+    </ul>
+  </nav>
+</body>
+</html>
