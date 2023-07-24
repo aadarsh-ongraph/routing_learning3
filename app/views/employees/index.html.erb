@@ -1,0 +1,27 @@
+<%#debugger%>
+
+<table>
+
+ <tr>
+   <th>name</th>
+   <th>department</th>
+   <th>salary</th>
+   <th>Phone number</th>
+ </tr>
+ 
+<%@employees.each do |employee| %>
+
+<tr>
+<td> <%= employee.name %></td>
+<td> <%= employee.department%></td> 
+<td> <%= employee.salary %></td>
+<td><%=  employee.phone_number %></td>
+</tr>
+
+
+<%end%>
+
+
+
+
+</table>

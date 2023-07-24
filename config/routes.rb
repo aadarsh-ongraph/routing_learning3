@@ -13,8 +13,17 @@ Rails.application.routes.draw do
 
   # get '/sidebar', to: 'sidebar#index'
 
-   root 'students#index'
-  #  get 'students', to: 'student#index'
-  resources :students, only: [:index, :new, :create, :edit, :update, :destroy]
+  #  root 'students#index'
+  
+   
+  #   get '/students', to: 'students#index'
+  # resources :students
   # get '/students/:id', to: 'students#delete'
+
+  # get '/users', to: 'users#index'
+
+  #  get '/employees', to: 'employees#index'
+  #  get '/employees/new'
+   
+  resources :employees
 end
