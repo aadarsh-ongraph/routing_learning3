@@ -6,6 +6,7 @@
     <th>Email</th>
      <th>Information</th>
      <th> Edit </th>
+     <th>Delete</th>
   </tr>
  <% @users.each do |user| %>
  <%#debugger%>
@@ -16,6 +17,8 @@
   <td><%= link_to "View", "/users/#{user.id}" %> </td>
   
   <td><%= link_to "Edit", "/users/edit/#{user.id}" %> </td>
+
+  <td><%= link_to "Delete", "users/delete/#{user.id}" %> </td>
 
   </tr>
   <%end%>

@@ -31,6 +31,10 @@ Rails.application.routes.draw do
 
   post '/users/update/:id', to: 'users#update'
 
+  get '/users/delete/:id', to:'users#destroy'
+
+ 
+
   #  get '/employees', to: 'employees#index'
   #  get '/employees/new'
    
