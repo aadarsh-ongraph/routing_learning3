@@ -1,0 +1,13 @@
+
+<h2> Edit User </h2>
+
+<%= form_tag("/users/update/#{@user.id}", :method => "post") do %>
+
+   Name <%= text_field_tag(:user_name) %>
+   Email id<%= email_field_tag(:user_email) %>
+   <br>
+   Address<%= text_area_tag(:user_address)%>
+   <%= submit_tag("Edit Done") %>
+  
+  
+<% end %>

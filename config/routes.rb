@@ -26,7 +26,11 @@ Rails.application.routes.draw do
   post '/users/create', to: 'users#create'
   get '/users/:id', to: 'users#view'
 
-  
+
+  get '/users/edit/:id', to: 'users#edit'
+
+  post '/users/update/:id', to: 'users#update'
+
   #  get '/employees', to: 'employees#index'
   #  get '/employees/new'
    

@@ -2,9 +2,10 @@
 <a href="/users/new">create new user</a>
 <table>
   <tr>
-    <th>name</th>
-    <th>email</th>
-     <th></th>
+    <th>Name</th>
+    <th>Email</th>
+     <th>Information</th>
+     <th> Edit </th>
   </tr>
  <% @users.each do |user| %>
  <%#debugger%>
@@ -12,8 +13,10 @@
     <td><%= user.name %></td>
     <td><%= user.email%></td>
 
-   
   <td><%= link_to "View", "/users/#{user.id}" %> </td>
+  
+  <td><%= link_to "Edit", "/users/edit/#{user.id}" %> </td>
+
   </tr>
   <%end%>
 </table>
