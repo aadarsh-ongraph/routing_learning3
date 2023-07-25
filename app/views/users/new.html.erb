@@ -1,0 +1,9 @@
+<%= form_tag("/users/create", :method => "post") do %>
+
+   Name <%= text_field_tag(:user_name) %>
+   Email id<%= email_field_tag(:user_email) %>
+   <br>
+   Address<%= text_area_tag(:user_address)%>
+   <%= submit_tag("Submit") %>
+   
+<% end %>

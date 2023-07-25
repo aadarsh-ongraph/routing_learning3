@@ -10,7 +10,7 @@ class EmployeesController < ApplicationController
          @employee = Employee.new
 
     end 
-
+    
         def create
             @employee = Employee.new(employee_params)
             if @employee.save 

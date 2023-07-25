@@ -20,10 +20,15 @@ Rails.application.routes.draw do
   # resources :students
   # get '/students/:id', to: 'students#delete'
 
-  # get '/users', to: 'users#index'
 
+  get '/users', to: 'users#index'
+  get '/users/new', to: 'users#new'
+  post '/users/create', to: 'users#create'
+  get '/users/:id', to: 'users#view'
+
+  
   #  get '/employees', to: 'employees#index'
   #  get '/employees/new'
    
-  resources :employees
+  # resources :employees
 end
