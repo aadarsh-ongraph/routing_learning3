@@ -1,0 +1,30 @@
+
+<div> <%= link_to "create new customers", "/customers/new"%> </div>
+
+<table>
+ <tr>
+   <th>Name</th>
+   <th>Age</th>
+   <th>Address</th>
+   <th>View</th>
+   <th>Edit</th>
+   <th>Delete</th>
+ </tr>
+
+  <% @customers.each do |customer| %>
+   <tr class = "tr">
+     <td><%= customer.name %> </td>
+     <td><%= customer.age %> </td>
+      <td><%= customer.address %></td>
+
+      <td><%= link_to "view", "/customers/view/#{customer.id}"%> </td>
+
+      <td><%= link_to "edit", "/customers/edit/#{customer.id}"%> </td>
+
+      <td><%= link_to "delete", "/customers/delete/#{customer.id}" %> </td>
+   </tr> 
+  <%end%>
+
+ 
+
+</table>

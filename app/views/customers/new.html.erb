@@ -1,0 +1,10 @@
+<h1> New Customer </h1>
+
+<%= form_tag("/customers/create", :method => "post" ) do %>
+
+  Name<%= text_field_tag(:name)%>
+  Age<%= text_field_tag(:age)%>
+  Address<%= text_area_tag(:address)%>
+
+  <%= submit_tag("create new customer")%>
+<%end%>

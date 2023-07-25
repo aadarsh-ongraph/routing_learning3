@@ -1,0 +1,10 @@
+<h1>Update Customer</h1>
+
+<%= form_tag("/customers/update/#{@customer.id}", :method => "post")  do %>
+ Name <%= text_field_tag(:name)%>
+ Age <%= text_field_tag(:age)%>
+ Address <%= text_field_tag(:address)%>
+
+ <%= submit_tag("edit")%>
+
+<% end %>

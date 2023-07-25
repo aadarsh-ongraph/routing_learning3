@@ -35,8 +35,21 @@ Rails.application.routes.draw do
 
  
 
-  #  get '/employees', to: 'employees#index'
-  #  get '/employees/new'
+    get '/employees', to: 'employees#index'
+    get '/employees/new', to: 'employees#new'
+    post '/employees/create', to: 'employees#create' 
+    get '/employees/delete/:id', to: 'employees#destroy'
+
+    get '/employees/view/:id', to: 'employees#view'
    
   # resources :employees
+
+     get '/customers', to: 'customers#index'
+     get '/customers/new', to: 'customers#new'
+     post '/customers/create', to: 'customers#create'
+     get '/customers/view/:id', to: 'customers#view'
+     get '/customers/delete/:id', to: 'customers#destroy'
+     get '/customers/edit/:id', to: 'customers#edit'
+     post '/customers/update/:id', to: 'customers#update'
+
 end

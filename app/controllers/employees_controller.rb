@@ -8,18 +8,22 @@ class EmployeesController < ApplicationController
 
     def new  
          @employee = Employee.new
-
     end 
     
-        def create
-            @employee = Employee.new(employee_params)
-            if @employee.save 
-                redirect_to employees_path
-            else           
-                render :new
-            end
-        end
-    def employee_params
-        params.require(:employee).permit(:name, :department, :salary, :phone_number)
+    def create
+        Employee.create(name:params[:name], department:params[:department], salary:params[:salary], phone_number:params[:phone_number])
+        redirect_to '/employees'
     end
+
+    def view 
+        @employee = Employee.find(params[:id])
+    end 
+
+    def destroy
+        @employee = Employee.find(params[:id])
+        @employee.destroy
+
+        redirect_to '/employees'
+    end 
+   
 end

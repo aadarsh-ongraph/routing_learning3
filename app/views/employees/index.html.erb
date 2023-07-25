@@ -1,5 +1,6 @@
 <%#debugger%>
 
+<a href="/employees/new">Create new employees</a>
 <table>
 
  <tr>
@@ -7,6 +8,8 @@
    <th>department</th>
    <th>salary</th>
    <th>Phone number</th>
+   <th>View</th>
+   <th>Delete</th>
  </tr>
  
 <%@employees.each do |employee| %>
@@ -16,6 +19,8 @@
 <td> <%= employee.department%></td> 
 <td> <%= employee.salary %></td>
 <td><%=  employee.phone_number %></td>
+<td><%= link_to 'View', "/employees/view/#{employee.id}" %> </td>
+<td><%= link_to 'delete', "/employees/delete/#{employee.id}" %> </td>
 </tr>
 
 
